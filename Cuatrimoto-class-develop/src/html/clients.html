@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/client.css" />
+  </head>
+  <body>
+    <div>
+      <form action="/action_page.php">
+        <div class="container">
+          <div id="formContainer">
+            <h1>Registro de Clientes</h1>
+            <div align=left><img src="https://a5i4f6g5.stackpathcdn.com/images/cms/Colores--1080x670_TRX.png" width="300"></div>
+            <p>Por favor ingrese la información del clientes</p>
+            <hr />
+
+            <input type="text" id="id" readonly />
+            <label for="name"><b>Nombre</b></label>
+            <input
+              type="text"
+              placeholder="ingrese el nombre"
+              id="name"
+              required
+            />
+            <label for="email"><b>Email</b></label>
+            <input
+              type="email"
+              placeholder="ingrese el email"
+              id="email"
+              required
+            />
+            <label for="name"><b>Contraseña</b></label>
+            <input
+              type="password"
+              placeholder="ingrese la contraseña"
+              id="password"
+              required
+            />
+            <label for="description"><b>Edad</b></label>
+            <input type="number" placeholder="Edad" id="age" required />
+
+            <hr />
+
+            <button type="button" class="registerbtn" onclick="createClient()">
+              Registrar
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <button class="registerbtn info" onclick="updateClient()">
+        Actualizar
+      </button>
+    </div>
+
+    <h2>Clientes disponibles en la aplicación</h2>
+
+    <div id="response"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/app.client.js"></script>
+  </body>
+</html>

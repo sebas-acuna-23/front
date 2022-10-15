@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category</title>
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/category.css" />
+  </head>
+  <body>
+    <div>
+      <form action="/action_page.php">
+        <div class="container">
+          <div id="formContainer">
+            
+            <h1>Registro de category</h1>
+            <div align=left><img src="https://a5i4f6g5.stackpathcdn.com/images/cms/Colores--1080x670_TRX.png" width="300"></div>
+            <p>Por favor ingrese la información del category</p>
+            <hr />
+
+            <input
+              type="text"              
+              id="id"   
+              readonly           
+            />
+            <label for="name"><b>Nombre</b></label>
+            <input
+              type="text"
+              placeholder="ingrese el nombre"
+              id="name"
+              required
+            />
+            <label for="description"><b>Descripción</b></label>
+            <input
+              type="text"
+              placeholder="Descripción"
+              id="description"
+              class="testi"
+              required
+            />
+
+            <hr />
+
+            <button
+              type="button"
+              class="registerbtn"
+              onclick="createCategory()"
+            >
+              Registrar
+            </button>
+            <button onclick="addClass()">agregar clase</button>
+          </div>
+        </div>
+      </form>
+
+      <button class="registerbtn info" onclick="updateCategory()">
+        Actualizar
+      </button>      
+    </div>
+
+    <h2>Categorías disponibles en la aplicación</h2>
+    <table>
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Nombre</td>
+          <td>Descripción</td>          
+        </tr>
+      </thead>
+      <tbody id="response"></tbody>
+    </table>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/app.category.js"></script>
+  </body>
+</html>

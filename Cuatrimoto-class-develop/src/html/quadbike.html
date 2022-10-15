@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quadbike</title>
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/quadbike.css" />
+  </head>
+  <body>
+    <div>
+      <form action="/action_page.php">
+        <div class="container">
+          <div id="formContainer">
+            <!-- <input type="text" placeholder="ingrese el id" id="id" />
+        <input type="text" placeholder="ingrese el nombre" id="name" />
+        <input type="text" placeholder="ingrese la descripción" id="description" />
+        <input type="text" placeholder="ingrese la marca" id="brand" />
+        <input type="text" placeholder="ingrese la edad" id="year" />
+        <input type="text" placeholder="ingrese la categoría" id="idCategory" />
+         -->
+            <h1>Registro de Quadbike</h1>
+            <div align = left><img src = "https://a5i4f6g5.stackpathcdn.com/images/cms/Colores--1080x670_TRX.png" width="300"></div>
+            <p>Por favor ingrese la información del quadbike</p>
+            <hr />
+
+            <input
+              type="text"              
+              id="id"   
+              readonly           
+            />
+            <label for="name"><b>Nombre</b></label>
+            <input
+              type="text"
+              placeholder="ingrese el nombre"
+              id="name"
+              required
+            />
+            <label for="description"><b>Descripción</b></label>
+            <input
+              type="text"
+              placeholder="Descripción"
+              id="description"
+              required
+            />
+
+            <label for="brand"><b>Marca</b></label>
+            <input type="text" placeholder="Marca" id="brand" required />
+
+            <label for="year"><b>Año</b></label>
+            <input type="number" placeholder="Año" id="year" required />
+            <label for="category"><b>Categoría</b></label>
+            <input
+              type="number"
+              placeholder="Categoría"
+              id="category"
+              required
+            />
+            <hr />
+
+            <button
+              type="button"
+              class="registerbtn"
+              onclick="createQuadbike()"
+            >
+              Registrar
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <button class="registerbtn info" onclick="updateQuadbike()">
+        Actualizar
+      </button>      
+    </div>
+
+    <h2>Quadbikes disponibles en la aplicación</h2>
+    <table>
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Nombre</td>
+          <td>Descripción</td>
+          <td>Marca</td>
+          <td>Año</td>
+        </tr>
+      </thead>
+      <tbody id="response"></tbody>
+    </table>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/app.quadbike.js"></script>
+  </body>
+</html>
